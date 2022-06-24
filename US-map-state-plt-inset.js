@@ -66,7 +66,7 @@ svg_choropleth.append("g")
     .enter()
     .append("svg:text")
     .text(function(d) {
-        return d.id;
+        return d.properties.name;
     })
     .attr("x", function(d) {
         return path.centroid(d)[0];
